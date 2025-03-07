@@ -26,13 +26,19 @@
       <input type="text" id="description" class="input">
     </div>
     <div>
-      <label for="imageUri">Image URI:</label>
-      <input type="text" id="imageUri" class="input">
+      <label for="image">Image:</label>
+      <input type="file" id="image" class="input">
     </div>
     <button onclick="linkReference()">Link Reference</button>
-    <button onclick="scanQRCode()">Scan QR Code</button>
+    <button onclick="clearFields()">Clear Fields</button>
+    <div>
+      <label for="search">Search Item or Reference:</label>
+      <input type="text" id="search" class="input">
+      <button onclick="searchItem()">Search</button>
+    </div>
     <div id="output"></div>
   </div>
   <script src="script.js"></script>
 </body>
 </html>
+
