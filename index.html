@@ -4,100 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inventory Management App</title>
-  <style>
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 16px;
-    }
-    .input {
-      height: 40px;
-      border: 1px solid gray;
-      margin-bottom: 12px;
-      padding: 8px;
-      width: 80%;
-    }
-    .image {
-      width: 100px;
-      height: 100px;
-      margin-top: 12px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="root"></div>
-  <script src="https://unpkg.com/react/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script type="text/babel">
-    const { useState } = React;
-
-    const InventoryApp = () => {
-      const [itemNumber, setItemNumber] = useState('');
-      const [reference, setReference] = useState('');
-      const [quantity, setQuantity] = useState('');
-      const [description, setDescription] = useState('');
-      const [imageUri, setImageUri] = useState('');
-      const [scanned, setScanned] = useState(false);
-
-      const handleLinkReference = () => {
-        // Lógica para relacionar el número de artículo con la referencia
-      };
-
-      const handleScan = () => {
-        // Lógica para activar el escáner y relacionar el código QR con el número de artículo
-      };
-
-      return (
-        <div className="container">
-          <p>Item Number: {itemNumber}</p>
-          <p>Reference: {reference}</p>
-          <p>Quantity: {quantity}</p>
-          <p>Description: {description}</p>
-          {imageUri && <img src={imageUri} alt="Item" className="image" />}
-          <input
-            type="text"
-            placeholder="Enter Item Number"
-            value={itemNumber}
-            onChange={(e) => setItemNumber(e.target.value)}
-            className="input"
-          />
-          <input
-            type="text"
-            placeholder="Enter Reference"
-            value={reference}
-            onChange={(e) => setReference(e.target.value)}
-            className="input"
-          />
-          <input
-            type="text"
-            placeholder="Enter Quantity"
-            value={quantity}
-            onChange={(e) => setQuantity(e.target.value)}
-            className="input"
-          />
-          <input
-            type="text"
-            placeholder="Enter Description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            className="input"
-          />
-          <input
-            type="text"
-            placeholder="Enter Image URI"
-            value={imageUri}
-            onChange={(e) => setImageUri(e.target.value)}
-            className="input"
-          />
-          <button onClick={handleLinkReference}>Link Reference</button>
-          <button onClick={handleScan}>Scan QR Code</button>
-        </div>
-      );
-    };
-
-    ReactDOM.render(<InventoryApp />, document.getElementById('root'));
-  </script>
+  <div class="container">
+    <h1>Inventory Management App</h1>
+    <div>
+      <label for="itemNumber">Item Number:</label>
+      <input type="text" id="itemNumber" class="input">
+    </div>
+    <div>
+      <label for="reference">Reference:</label>
+      <input type="text" id="reference" class="input">
+    </div>
+    <div>
+      <label for="quantity">Quantity:</label>
+      <input type="text" id="quantity" class="input">
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <input type="text" id="description" class="input">
+    </div>
+    <div>
+      <label for="imageUri">Image URI:</label>
+      <input type="text" id="imageUri" class="input">
+    </div>
+    <button onclick="linkReference()">Link Reference</button>
+    <button onclick="scanQRCode()">Scan QR Code</button>
+    <div id="output"></div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
