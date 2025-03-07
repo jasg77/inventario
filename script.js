@@ -5,21 +5,10 @@ function linkReference() {
   const reference = document.getElementById('reference').value;
   const quantity = document.getElementById('quantity').value;
   const description = document.getElementById('description').value;
-  const imageInput = document.getElementById('image');
-  const imageFile = imageInput.files[0];
+  const imageUri = document.getElementById('imageUri').value;
 
-  if (imageFile) {
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      const imageUri = e.target.result;
-      saveItem(itemNumber, reference, quantity, description, imageUri);
-      clearFields();
-    };
-    reader.readAsDataURL(imageFile);
-  } else {
-    saveItem(itemNumber, reference, quantity, description, '');
-    clearFields();
-  }
+  saveItem(itemNumber, reference, quantity, description, imageUri);
+  clearFields();
 }
 
 function saveItem(itemNumber, reference, quantity, description, imageUri) {
@@ -47,7 +36,7 @@ function clearFields() {
   document.getElementById('reference').value = '';
   document.getElementById('quantity').value = '';
   document.getElementById('description').value = '';
-  document.getElementById('image').value = '';
+  document.getElementById('imageUri').value = '';
 }
 
 function searchItem() {
@@ -82,6 +71,7 @@ function scanQRCode() {
 
 // Cargar el inventario al iniciar la aplicación
 loadInventory();
+
 
 
   
