@@ -2,17 +2,17 @@
     "items": [
       {
         "itemNumber": "001",
-        "imagePath": "images/item001.jpg",
+        "imagePath": "imagenes/item001.jpg",
         "description": "Tubo filtro 1 pulgada"
       },
       {
         "itemNumber": "002",
-        "imagePath": "images/item002.jpg",
+        "imagePath": "imagenes/item002.jpg",
         "description": "Descripción del ítem 002"
       },
       {
         "itemNumber": "003",
-        "imagePath": "images/item003.jpg",
+        "imagePath": "imagenes/item003.jpg",
         "description": "Descripción del ítem 003"
       }
     ]
