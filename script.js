@@ -31,7 +31,15 @@ function saveItem(itemNumber, reference, quantity, description, imageUri) {
     imageUri
   };
   inventory.push(item);
+  localStorage.setItem('inventory', JSON.stringify(inventory));
   console.log('Item saved:', item);
+}
+
+function loadInventory() {
+  const storedInventory = localStorage.getItem('inventory');
+  if (storedInventory) {
+    inventory = JSON.parse(storedInventory);
+  }
 }
 
 function clearFields() {
@@ -71,6 +79,10 @@ function displayOutput(item) {
 function scanQRCode() {
   alert('QR Code scanning functionality is not implemented yet.');
 }
+
+// Cargar el inventario al iniciar la aplicación
+loadInventory();
+
 
 
   
