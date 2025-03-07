@@ -37,6 +37,7 @@ function clearFields() {
   document.getElementById('quantity').value = '';
   document.getElementById('description').value = '';
   document.getElementById('imageUri').value = '';
+  document.getElementById('search').value = '';
 }
 
 function searchItem() {
@@ -71,7 +72,6 @@ function scanQRCode() {
 
 // Cargar el inventario al iniciar la aplicación
 loadInventory();
-
 
 
 
