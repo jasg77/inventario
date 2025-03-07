@@ -84,5 +84,4 @@ function scanQRCode() {
 loadInventory();
 
 
-
   
