@@ -72,4 +72,5 @@ function scanQRCode() {
   alert('QR Code scanning functionality is not implemented yet.');
 }
 
+
   
