@@ -1,46 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inventory Management App</title>
+  <title>Item Image Viewer</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>Inventory Management App</h1>
-    <div>
-      <label for="itemNumber">Item Number:</label>
-      <input type="text" id="itemNumber" class="input">
+    <h1>Visor de Imágenes de Ítems</h1>
+    <div class="input-group">
+      <input type="text" id="itemNumberInput" placeholder="Introduce el número de ítem">
+      <button onclick="showItem()">Mostrar Ítem</button>
     </div>
-    <div>
-      <label for="reference">Reference:</label>
-      <input type="text" id="reference" class="input">
-    </div>
-    <div>
-      <label for="quantity">Quantity:</label>
-      <input type="text" id="quantity" class="input">
-    </div>
-    <div>
-      <label for="description">Description:</label>
-      <input type="text" id="description" class="input">
-    </div>
-    <div>
-      <label for="imageUri">Image URL:</label>
-      <input type="text" id="imageUri" class="input">
-    </div>
-    <button onclick="linkReference()">Link Reference</button>
-    <button onclick="clearFields()">Clear Fields</button>
-    <div>
-      <label for="search">Search Item or Reference:</label>
-      <input type="text" id="search" class="input">
-      <button onclick="searchItem()">Search</button>
-    </div>
-    <div id="output"></div>
+    <div id="itemContainer" class="item-container"></div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
